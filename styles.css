@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2c2c2c;
+    color: #dcdcdc;
+}
+
+h1 {
+    text-align: center;
+}
+
+#secciones {
+    display: flex;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    height: 77px;
+    margin: 5px;
+    background-color: #424242;
+    border-radius: 5px;
+}
+
+audio {
+    width: 350px;
+    height: 54px;
+}
+
+section.audio {
+    width: 50%;
+}
+
+section.audio audio {
+    width: 30px;
+    display: none;
+}
+
+section.audio textarea {
+    width: 180px;
+}
+
+textarea {
+    width: 250px;
+    height: 50px;
+    border-radius: 3px;
+}
+
+section.txt {
+    width: 30vw;
+    height: auto;
+    max-height: 150px;
+    overflow: auto;
+    word-wrap: break-word;
+}
+
+section.txt p {
+    margin: 0;
+    padding: 5px;
+}
+
+.seccion-txt { 
+    position: relative; 
+}
+
+.btn-seccion {
+    position: absolute;
+    bottom: 0;
+    right: -350px; /* Este valor debe ser mayor al ancho del contenido a la izquierda de cada sección */
+    background-color: white;
+    z-index: 1; /* Este valor debe ser mayor que el de la sección de texto */
+    width: 400px; /* Ancho de la sección "Mostrar" */
+}
+
+.mostrar-contenido {
+    display: block;
+}
+
+/* Estilo para el botón de modo oscuro */
+#btnModoOscuro {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: #dcdcdc;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+#btnModoOscuro:hover {
+    color: white;
+}
+
+/* Estilo para el botón de seleccionar archivos */
+#btnSeleccionarAudio, #btnSeleccionarTxt {
+    background-color: #424242;
+    color: #dcdcdc;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btnSeleccionarAudio:hover, #btnSeleccionarTxt:hover {
+    background-color: #616161;
+}
+
+/* Estilo para el input de tipo file */
+input[type="file"] {
+    display: none;
+}
+
+/* Estilo para el label de selección de archivos */
+label {
+    background-color: #424242;
+    color: #dcdcdc;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+label:hover {
+    background-color: #616161;
+}
+
+/* Estilo para el botón "Mostrar" de la sección de texto */
+.btn-mostrar {
+    background-color: #424242;
+    color: #dcdcdc;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.btn-mostrar:hover {
+    background-color: #616161;
+}
+
+/* Estilo para el contenido de la sección "Mostrar" */
+.contenido-mostrar {
+    background-color: #2c2c2c;
+    color: #dcdcdc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.polo {
+  flex-grow: 1;
+  max-width: 500px;
+  min-width: 300px;
+}
+
+.polo p {
+  padding: 10px;
+  line-height: 1.2;
+}
